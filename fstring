@@ -1,0 +1,31 @@
+name = "karthik"
+age = 23
+phonenumber = 9515
+message = f"Hello, my name is {name} and I am {age} years old And my number is {phonenumber}."
+# print(message)
+
+
+cycledt = "09092000"
+
+# by using slicing method
+day = cycledt[:2]
+month = cycledt[2:4]
+year = cycledt[4:]
+
+formatted_date = f"this is  the date {day}-{month}-{year}"
+print(formatted_date)
+# Output: 09-09-2000
+
+def greet(name):
+    return f"Hello, {name}!"
+
+username = "karthik"
+greeting = greet(username)
+print(greeting)
+# Output: Hello, karthik!
+
+a = 10
+b = 5
+result = f"The sum of {a} and {b} is {a + b}."
+print(result)
+# Output: The sum of 10 and 5 is 15.
