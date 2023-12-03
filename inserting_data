@@ -1,0 +1,38 @@
+import pandas as pd
+import mysql.connector
+
+# MySQL configuration
+mysql_config = {
+    'host': '127.0.0.1',
+    'database': 'sample',
+    'user': 'root',
+    'password': '0263'
+}
+
+# Read CSV file
+csv_file = 'C:\\Users\\JESUS CHRIST\\OneDrive\\Desktop\\sample.data.csv'
+data = pd.read_csv(csv_file)
+print(data)
+
+# Connect to MySQL
+try:
+    conn = mysql.connector.connect(**mysql_config)
+    cursor = conn.cursor()
+
+    # Write data to the MySQL table
+    for _, row in data.iterrows():
+        firstnm = row['firstnm']
+        lastnm = row['lastnm']
+        phonenumber = row['phonenumber']
+
+        query = "INSERT INTO sample (firstnm, lastnm, phonenumber) VALUES (%s, %s, %s)"
+        values = (firstnm, lastnm, phonenumber)
+        cursor.execute(query, values)
+
+    # Commit changes and close connection
+    conn.commit()
+    conn.close()
+    print("Data inserted into MySQL table successfully!")
+
+except mysql.connector.Error as error:
+    print("Error:", error)
