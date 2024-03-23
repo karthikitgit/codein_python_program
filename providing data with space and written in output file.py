@@ -15,7 +15,7 @@ data = [line.split(',') for line in input_data]
 # Custom output file path
 output_file_path = 'C:\\Users\\JESUS CHRIST\\OneDrive\\Desktop\\csv\\text_file.txt'
 
-# Write the formatted data to a CSV file at the specified output path with spaces between columns
+
 with open(output_file_path, mode='w', newline='') as file:
     csv_writer = csv.writer(file, delimiter='\t')
     for row in data:

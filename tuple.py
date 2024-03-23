@@ -7,7 +7,7 @@ for index, fruit in enumerate(fruits):
 
 temperatures = (25, 30, 22, 35, 28)
 
-# Finding the maximum value
+
 max_temp = temperatures[0]
 for temp in temperatures:
     if temp > max_temp:
@@ -40,9 +40,8 @@ print(f"{color_to_check} exists: {exists}")
 # print(fam)
 import pandas as pd
 
-# Creating a DataFrame with some data
 data = {'A': [1, 2, 3], 'B': ['a', 'b', 'c']}
 df = pd.DataFrame(data)
 
-# Checking if the DataFrame is empty
-print(df.empty)  # This will print False because it has rows and columns with data
+
+print(df.empty) 

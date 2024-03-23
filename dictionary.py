@@ -17,14 +17,14 @@ for  key in person:
      print(value)
 
 
-# Iterating through keys
+
 
 for key in person:
     print(key)
 
 
 
-# Iterating through values
+
 for value in person.values():
     print(value)
 
@@ -42,7 +42,6 @@ if exists:
      print(f"{key_to_check} exists in the dictionary")
 
 
-
 for key in person:
     if key == "age":
         person[key] *= 2
@@ -58,7 +57,7 @@ print(A.items())
 
 
 person = {"name": "John", "age": 30, "city": "New York"}
-# Adding a key-value pair: ages['David'] = 28
+
 person["Age"]= 28
 person["phone_no"]= 9515767950
 

@@ -13,10 +13,10 @@ with open(input_file_path, mode='r') as file:
     for row in csv_reader:
         data.append(row)
 
-# Sort the data based on multiple columns: 'Firstnm', 'Lastnm', and 'phonenumber'
+
 sorted_data = sorted(data, key=lambda x: (x['Firstnm'], x['Lastnm'], x['phonenumber']))
 
-# Write the sorted data to a new text file, replacing commas with spaces
+
 with open(output_file_path, mode='w', newline='') as file:
     fieldnames = ['Firstnm', 'Lastnm', 'phonenumber']
     for row in sorted_data:

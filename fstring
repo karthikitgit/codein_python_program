@@ -7,7 +7,6 @@ message = f"Hello, my name is {name} and I am {age} years old And my number is {
 
 cycledt = "09092000"
 
-# by using slicing method
 day = cycledt[:2]
 month = cycledt[2:4]
 year = cycledt[4:]
